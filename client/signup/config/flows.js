@@ -159,6 +159,13 @@ const flows = {
 		destination: getCheckoutDestination,
 		description: 'Signup flow for free trials',
 		lastModified: '2015-12-18'
+	},
+
+	mlb: {
+		steps: [ 'mlb-themes', 'mlb-domains', 'user' ],
+		destination: '/me/next?welcome',
+		description: 'Major League Baseball Blogs Signup flow',
+		lastModified: '2015-11-22'
 	}
 };
 
