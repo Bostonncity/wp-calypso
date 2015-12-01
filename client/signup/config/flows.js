@@ -161,6 +161,12 @@ const flows = {
 		lastModified: '2015-12-18'
 	},
 
+	/*
+	 * MLB signup flow is not production ready.
+	 * Some API changes are neeeded to
+	 * - allow mlblogs.com sites creation as a free product.
+	 * - allow updating theme_options for team-specific styles.
+	 */
 	mlb: {
 		steps: [ 'mlb-themes', 'mlb-domains', 'user' ],
 		destination: '/me/next?welcome',
