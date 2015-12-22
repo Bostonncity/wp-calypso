@@ -14,6 +14,7 @@ import Notifications from './notifications';
 import Gravatar from 'components/gravatar';
 import layoutFocus from 'lib/layout-focus';
 import config from 'config';
+import LoggedOut from './index.node';
 
 export default React.createClass( {
 	displayName: 'Masterbar',
@@ -123,11 +124,7 @@ export default React.createClass( {
 
 		// Logged out
 		return (
-			<header id="header" className={ classes }>
-				<Item url="/" icon="my-sites" className="masterbar__item-logo">
-					WordPress<span className="tld">.com</span>
-				</Item>
-			</header>
+			<LoggedOut />
 		);
 	}
 } );

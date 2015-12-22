@@ -2,5 +2,6 @@
   "name": "masterbar",
   "version": "0.0.0",
   "private": true,
-  "main": "index.web.jsx"
+  "main": "index.node.jsx",
+  "browser": "index.web.jsx"
 }
