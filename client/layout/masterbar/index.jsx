@@ -2,6 +2,7 @@
  * External dependencies
  */
 import React from 'react';
+import classNames from 'classnames';
 
 /**
  * Internal dependencies
@@ -59,9 +60,13 @@ export default React.createClass( {
 	},
 
 	render() {
+		const classes = classNames( 'masterbar', {
+			collapsible: !! this.props.user,
+		} );
+
 		if ( this.props.user ) { // Logged in
 			return (
-				<header id="header" className="masterbar collapsible">
+				<header id="header" className={ classes }>
 					<StatsItem
 						icon={ this.wordpressIcon() }
 						onClick={ this.clickMySites }
