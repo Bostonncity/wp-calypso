@@ -13,7 +13,7 @@ import Notifications from './notifications';
 import Gravatar from 'components/gravatar';
 import layoutFocus from 'lib/layout-focus';
 import config from 'config';
-import LoggedOut from './index.node';
+import LoggedOut from './logged-out';
 
 export default React.createClass( {
 	displayName: 'Masterbar',

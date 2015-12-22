@@ -1,7 +1,0 @@
-{
-  "name": "masterbar",
-  "version": "0.0.0",
-  "private": true,
-  "main": "index.node.jsx",
-  "browser": "index.web.jsx"
-}
