@@ -4,27 +4,21 @@
 import React from 'react';
 import classNames from 'classnames';
 
-/**
- * Internal dependencies
- */
+const Masterbar = ( { collapsible, children } ) => {
+	const classes = classNames( 'masterbar', { collapsible } );
 
-export default React.createClass( {
-	displayName: 'Masterbar',
+	return (
+		<header id="header" className={ classes }>
+			{ children }
+		</header>
+	);
+};
 
-	propTypes: {
-		collapsible: React.PropTypes.bool,
-		children: React.PropTypes.element
-	},
+Masterbar.displayName = 'Masterbar';
 
-	render() {
-		const classes = classNames( 'masterbar', {
-			collapsible: this.props.collapsible,
-		} );
+Masterbar.propTypes = {
+	collapsible: React.PropTypes.bool,
+	children: React.PropTypes.element
+};
 
-		return (
-			<header id="header" className={ classes }>
-				{ this.props.children }
-			</header>
-		);
-	}
-} );
+export default Masterbar;
