@@ -10,6 +10,7 @@ var React = require( 'react' ),
  */
 
 var Masterbar = require( 'layout/masterbar' ),
+	LogggedOutMasterbar = require( 'layout/masterbar/logged-out' ),
 	GlobalNotices = require( 'components/global-notices' ),
 	notices = require( 'notices' ),
 	LoggedOutLayout;
@@ -25,7 +26,9 @@ LoggedOutLayout = React.createClass( {
 
 		return (
 			<div className={ classes }>
-				<Masterbar />
+				<Masterbar collapsible={ false } >
+					<LogggedOutMasterbar />
+				</Masterbar>
 				<div id="content" className="wp-content">
 					<GlobalNotices id="notices" notices={ notices.list } />
 					<div id="primary" className="wp-primary wp-section" />
